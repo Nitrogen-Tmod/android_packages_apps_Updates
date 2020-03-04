@@ -48,7 +48,7 @@ public class Utils {
     }
 
     public static File makeUpdateFolder() {
-        File updatesFolder = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + Constants.UPDATES_FOLDER);
+        File updatesFolder = new File("/data/system_updates/" + Constants.UPDATES_FOLDER);
         if (!updatesFolder.exists()) {
             try {
                 updatesFolder.mkdir();
@@ -77,7 +77,7 @@ public class Utils {
     }
 
     public static void deleteTempFolder() {
-        deleteDir(new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + Constants.UPDATES_FOLDER + "/" + "temp"));
+        deleteDir(new File("/data/system_updates/" + Constants.UPDATES_FOLDER + "/" + "temp"));
     }
 
     public static void cancelNotification(Context context) {
